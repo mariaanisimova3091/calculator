@@ -13,10 +13,10 @@
       <div class="item input">
         <form name="form"><input type="text" name="textview" readonly /></form>
       </div>
-      <div class="item gray">AC</div>
-      <div class="item gray" onclick="insert('')">+/-</div>
+      <div class="item gray" onclick="clean()">AC</div>
+      <div class="item gray" onclick="insert('±')">+/-</div>
       <div class="item gray" onclick="insert('%')">%</div>
-      <div class="item orange" onclick="insert('/')">÷</div>
+      <div class="item orange" onclick="insert('÷')">÷</div>
       <div class="item" onclick="insert('7')">7</div>
       <div class="item" onclick="insert('8')">8</div>
       <div class="item" onclick="insert('9')">9</div>
@@ -36,6 +36,9 @@
     <script>
       function insert(num) {
         document.form.textview.value = document.form.textview.value + num;
+      }
+      function clean() {
+        document.form.textview.value = '';
       }
     </script>
   </body>
